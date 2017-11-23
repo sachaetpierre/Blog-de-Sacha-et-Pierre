@@ -1,0 +1,10 @@
+body {
+  font-family: 'Lato', georgia;
+  font-size: 25px;
+  color: blue;
+  background-color: honeydew;
+  text-align: center;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
