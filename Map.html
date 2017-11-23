@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>Carte Interactive</title>
+<link href="CSSblog.css" rel="stylesheet" type="text/css">
+<object type="audio/mpeg" width="0" height="0" data="media/Lina Margy - Les trois buveurs de bière.mp3">
+<param name="filename" value="../../../../../../Downloads/Mouloudji - Lamour lamour lamour (audio).mp3" />
+<param name="autostart" value="true" />
+<param name="loop" value="false" />
+</object>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"}
+.w3-bar-block .w3-bar-item {padding:40px}
+</style>
+<body>
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">	
+ <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">
+	<form name="Le blog" action="index.html" method="post">
+<input type="submit" value="Le blog">
+	</form></a>
+ <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button">
+	<form name="Contact" action="Contact.html" method="post">
+<input type="submit" value="Contact">
+	</form></a>
+</nav>
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">&nbsp;</div>
+	<div class="w3-center w3-padding-16">La Carte interactive</div>
+  </div>
+</div>
+	<p><center><img src="images/logo_big.png" alt="Logo"> </center>
+</p>
+</div>
+	  <center><h2>Notre carte interactive des coins buvettes de Nice !</h2></center>
+	  <center><h4>Cliquez, réservez, allez, buvez, rentrez, dormez!</h4></center>
+	  <center><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2884.68821102304!2d7.273284340588676!3d43.6962449851068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs!5e0!3m2!1sit!2sfr!4v1511020380721" width="1020" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+	  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+	  <h3>CGV</h3>
+      <p>Conditions générales de vente ci-dessous:</p>
+      <p>Lien de <a href="CGV.html" target="_blank">conditions générales de vente</a></p>
+    </div>
+  <a href="http://twitter.com/blogdesachaetpierre" class="twitter-share-button" 
+  data-count="horizontal" data-via="BlogdeSachaetPierre">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	 <a href="https://www.facebook.com/sacha.maertens?fref=ts" title="Suivez-moi sur facebook !"><img src="https://www.calliframe.com/wp-content/uploads/2013/12/facebook.png" /></a>
+	  <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.example.com/page.html&layout=box_count&show_faces=true&width=65&action=like&font=arial&colorscheme=light&height=65" 
+  scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:65px; margin-top:3px;" allowTransparency="true"></iframe>
+    <div class="w3-third">
+      <h3>ARTICLES</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="images/footer 1.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">#SachaetPierre</span><br>
+          <span>Coins tendances de la ville de Nice</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="images/footer 2.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">#SachaetPierre</span><br>
+          <span>Les bières artisanales de Nice</span>
+        </li> 
+      </ul>
+    </div>
+
+   
+  </footer>
+
+</div>
+
+<small class='website'>Viens sur <a href='Homepage.html' target='_blank'>blogdesachaetpierre.com</a> pour connaitre notre aventure</small>
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
