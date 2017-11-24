@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>Homepage</title>
+<meta charset="UTF-8">
+<link href="CSSblog.css" rel="stylesheet" type="text/css">
+<embed src="media/song.mp3" autostart="true" loop="true" width="2" height="0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<body>
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:10%;min-width:300px" id="mySidebar">	
+ <a href="Map.html" onclick="w3_close()" class="w3-bar-item w3-button">
+	<form name="Carte interactive" action="Map.html" method="get">
+<input type="submit" value="Carte interactive">
+	</form></a>
+ <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button">
+	<form name="Contact" action="Contact.html" method="get">
+<input type="submit" value="Contact">
+	</form></a>
+</nav>
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">&nbsp;</div>
+	<div class="w3-center w3-padding-16">Coins tendances du moment</div>
+  </div>
+</div>
+	<p><center><img src="images/logo_big.png" alt="Logo"></center>
+</p>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <div class="w3-row-padding w3-padding-16 w3-center" id="bières">
+    <div class="w3-quarter">
+		<a href=http://www.aufutetamesure.fr
+      <a><img src="images/homepage/pubs/Au Fût et à Mesure.jpg" alt="Au fût et à mesure" style="width:70%"></a>
+      <h3>Au Fût et à mesure</h3>
+      <p>Un coin de networking entre collègues/proches/ou simples rencontres alcoolo, ce bar vous fera frissoner de mousses oncteuses de toutes les saveurs possibles.</p>
+		<p>Selon nous, les meilleures bières de Nice</p>
+		  </div>
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Wayne's.jpg" alt="Wayne's" style="width:70%">
+      <h3>Le Wayne's</h3>
+      <p>Le bar/discothèque où tu peux partager ta bière entre amis au milieu d'un groupe de musiques</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Akhator.jpg" alt="L'Akhator" style="width:70%">
+      <h3>L'Akhator</h3>
+      <p>Ce pub anglais est un endroit magique situé dans le cours soleya de Nice.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Les 3 Diables.jpg" alt="Les 3 Diables" style="width:70%">
+      <h3>Les 3 Diables</h3>
+      <p>Ne vous inquiètez pas, il n'y a pas de diables dans ce bar surnommé "les 3D", mais des bonnes boissons fraîches alcoolisées.</p>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Master Home.jpg" alt="Le Master" style="width:70%">
+      <h3>Le Master</h3>
+      <p>Le Master, c'est bien évidemment le bar après les cours de maths! :)</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Manolas.jpg" alt="Manolan's" style="width:70%">
+      <h3>Le Manolan's</h3>
+      <p>Allez-y, essayez-le, vous allez l'adopter!</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Le Blast.jpg" alt="Le Blast" style="width:70%">
+      <h3>Le Blast</h3>
+      <p>Le Blast est entouré de bars sympas, mais c'est là qu'il faut aller.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="images/homepage/pubs/Le Son de Guitares.jpg" alt="Le son des guitares" style="width:70%">
+      <h3>Le son des guitares</h3>
+      <p>Le son des guitares est déjà connu sur Marseille, mais arrivé à Nice, il fait un carton! Groupe de musiques et ambiance chic, si vous voulez chopper, c'est là qu'il faut aller :p.</p>
+    </div>
+  </div>
+<img src="images/beer.png" id="JB" alt="Bière" style="position: absolute; top: 100px; left: 0px;" />
+ <script type="text/javascript">
+ 	function move(amplitude, frequence, vitesse, larg, posYi, sens) {
+   el = document.getElementById('JB');
+   posX = parseInt(el.style.left);
+   posY = parseInt(el.style.top);
+   if (eval(posX+el.width) >= larg && sens == 1) {
+   	sens = -sens;
+   } else if (eval(posX) <= 0 && sens == -1) {
+   	sens = -sens;
+   }
+   posX = eval(posX+sens*vitesse);
+   posY = Math.round(posY + sens*amplitude*Math.cos(posX/(frequence*vitesse)));
+   el.style.top = posY + 'px';
+   el.style.left = posX + 'px';
+   setTimeout('move('+amplitude+', '+frequence+', '+vitesse+', '+larg+', '+posYi+', '+sens+')', 20);
+ 	}
+ 	move(6, 10, 5, document.body.clientWidth, eval(parseInt(document.getElementById('JB').style.top)), 1);
+ </script>
+  
+  <hr id="about">
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About us, the tipsy men</h3><br>
+    <img src="images/sacha_et_pierre.gif" alt="Sacha et Pierre" class="w3-image" style="display:block;margin:auto" width="700" height="500">
+    <div class="w3-padding-32">
+      <h4><b>Qui sommes-nous?</b></h4>
+      <h6><i>La passion de la buvette entre collègues!</i></h6>
+      <p>Bonjour à tous, ce blog s'est créé autour d'une rencontre entre Pierre et moi. Après nos études à l'école de commerce EDHEC de Nice, tous deux passionnés d'aventures et de découvertes, nous avons décidé de créer un blog regroupant nos expériences passées, mais surtout de permettre à d'autres personnes de pouvoir explorer le monde. Et oui, nous vous permettrons de découvrir la côte d'azur dans tous ces coins plein de magies et de finesses, autour de buvettes, de restaurants typiques, mais aussi de danses et de sports. Ce blog est donc une ouverture et une invitation à toutes les personnes qui aimeraient découvrir le sud de la france en magie! Si cette aventure avec vous se montre positive, nous vous ferons explorer d'autres territoires bien plus que merveilleux, à l'aide d'une carte interactive qui vous notifiera les coins tendances du moment situés au plus près de chez vous ou de votre position à l'aide de pop-ups. Nous adorons poster des articles, mais surtout de faire partager des rencontres, des paysages, des coins tendances, des économies sur des vêtements, et bien plus encore! Notre blog sera un lien de visualiser les expériences de chacun mais aussi un moyen de communiquer avec d'autres utilisateurs, à l'aide d'un chatbot et d'un forum qui sera disponible très bientôt afin de permettre à chacun de pouvoir discuter et d'échanger, car le bonheur est avant tout dans le partage! En espérant que ces moments vous en seront agréables et nous restons disponibles si jamais vous souhaitez nous contacter...</p>
+    </div>
+  </div>
+  <hr>
+  
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>CGV</h3>
+      <p>Conditions générales de vente ci-dessous:</p>
+      <p>Lien de <a href="CGV.html" target="_blank">conditions générales de vente</a></p>
+    </div>
+  <a href="https://twitter.com/blogdesachaetp" class="twitter-share-button" 
+  data-count="vertical" data-via="BlogdeSachaetPierre">Tweet</a>
+<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+	 <a href="https://www.facebook.com/Blog-de-Sacha-et-Pierre-964529350363835/?ref=your_pages" title="Suivez-moi sur facebook !"><img src="https://www.calliframe.com/wp-content/uploads/2013/12/facebook.png" /></a>
+	  <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/Blog-de-Sacha-et-Pierre-964529350363835/&layout=box_count&show_faces=true&width=65&action=like&font=arial&colorscheme=light&height=65" 
+  scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:65px; margin-top:3px;" allowTransparency="true"></iframe>
+    <div class="w3-third">
+      <h3>ARTICLES</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="images/footer 1.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">#SachaetPierre</span>
+		<a href="Article1.html" onclick="w3_close()" class="w3-bar-item w3-button">
+          <span>Coins tendances de la ville de Nice</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="images/footer 2.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">#SachaetPierre</span><br>
+			<a href="Article2.html" onclick="w3_close()" class="w3-bar-item w3-button">
+          <span>Les bières artisanales de Nice</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>HASHTAGS SUR NOS RESEAUX SOCIAUX</h3>
+      <p>
+        <span class="w3-tag w3-dark-grey w3-small">Touristes</span> <span class="w3-tag w3-red w3-margin-bottom w3-margin-bottom">Nice</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bières</span>
+        <span class="w3-tag w3-red w3-margin-bottom w3-margin-bottom">Drinks</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Boissons</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Networking</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Expériences</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Friends</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Partage</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tapas</span>
+        <span class="w3-tag w3-red w3-margin-bottom w3-margin-bottom">Coins Tendances</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Love</span>
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
