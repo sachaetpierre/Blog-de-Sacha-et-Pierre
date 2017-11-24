@@ -15,6 +15,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", Cambria, "Hoefler Text", "Liberati
 .w3-bar-block .w3-bar-item {padding:40px}
 </style>
 <body>
+	<img src="images/tumblr_men4drfXRu1qe5icro1_250.gif" id="JB" alt="Bière" style="position: absolute; top: 100px; left: 0px;" />
+ <script type="text/javascript">
+ 	function move(amplitude, frequence, vitesse, larg, posYi, sens) {
+   el = document.getElementById('JB');
+   posX = parseInt(el.style.left);
+   posY = parseInt(el.style.top);
+   if (eval(posX+el.width) >= larg && sens == 1) {
+   	sens = -sens;
+   } else if (eval(posX) <= 0 && sens == -1) {
+   	sens = -sens;
+   }
+   posX = eval(posX+sens*vitesse);
+   posY = Math.round(posY + sens*amplitude*Math.cos(posX/(frequence*vitesse)));
+   el.style.top = posY + 'px';
+   el.style.left = posX + 'px';
+   setTimeout('move('+amplitude+', '+frequence+', '+vitesse+', '+larg+', '+posYi+', '+sens+')', 20);
+ 	}
+ 	move(6, 10, 5, document.body.clientWidth, eval(parseInt(document.getElementById('JB').style.top)), 1);
+ </script>
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">	
  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">
 	<form name="Le blog" action="index.html" method="get">
@@ -32,7 +51,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", Cambria, "Hoefler Text", "Liberati
 	<div class="w3-center w3-padding-16">La Carte interactive</div>
   </div>
 </div>
-	<p><center><img src="images/logo_big.png" alt="Logo"> </center>
+	<p><center><img src="/" alt="Logo"> </center>
 </p>
 </div>
 	  <center><h2>Notre carte interactive des coins buvettes de Nice !</h2></center>
