@@ -1,59 +1,43 @@
 <!DOCTYPE html>
-<html>
-	<head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109255307-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-109255307-2');
-</script>
-<meta charset="UTF-8">
+<html lang="fr">
 <title>Carte Interactive</title>
+<meta charset="UTF-8">
 <link href="CSSblog.css" rel="stylesheet" type="text/css">
-<object type="audio/mpeg" width="0" height="0" data="media/nissa la bella.mp3">
-<param name="autostart" value="true" />
-<param name="loop" value="false" />
-</object>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"}
-.w3-bar-block .w3-bar-item {padding:40px}
-</style>
-	</head>
+<embed src="media/map.mp3" autostart="true" loop="true" width="2" height="0">
 <body>
-	<p><center><img src="images/logo_big.png" alt="Logo"> </center>
-</p>
-	<img src="images/tumblr_men4drfXRu1qe5icro1_250.gif" id="JB" alt="Bière" style="position: absolute; top: 100px; left: 0px;" />
- <script type="text/javascript">
- 	function move(amplitude, frequence, vitesse, larg, posYi, sens) {
-   el = document.getElementById('JB');
-   posX = parseInt(el.style.left);
-   posY = parseInt(el.style.top);
-   if (eval(posX+el.width) >= larg && sens == 1) {
-   	sens = -sens;
-   } else if (eval(posX) <= 0 && sens == -1) {
-   	sens = -sens;
-   }
-   posX = eval(posX+sens*vitesse);
-   posY = Math.round(posY + sens*amplitude*Math.cos(posX/(frequence*vitesse)));
-   el.style.top = posY + 'px';
-   el.style.left = posX + 'px';
-   setTimeout('move('+amplitude+', '+frequence+', '+vitesse+', '+larg+', '+posYi+', '+sens+')', 20);
- 	}
- 	move(6, 10, 5, document.body.clientWidth, eval(parseInt(document.getElementById('JB').style.top)), 1);
- </script>
+	<p><center><img src="pictures/logo.png" alt="Logo"> </center></p>
+	<img src="pictures/map.gif" id="JB" alt="Bière" style="position: absolute; top: 100px; left: 0px;" />
+ 		<script
+		type="text/javascript">
+ 		function move(amplitude, frequence, vitesse, larg, posYi, sens)
+	 	{el = document.getElementById('JB');
+	  	posX = parseInt(el.style.left);
+	  	posY = parseInt(el.style.top);
+	  	if (eval(posX+el.width) >= larg && sens == 1)
+	  	{sens = -sens;}
+	  	else if (eval(posX) <= 0 && sens == -1)
+	  	{sens = -sens;}
+	  	posX = eval(posX+sens*vitesse);
+	  	posY = Math.round(posY + sens*amplitude*Math.cos(posX/(frequence*vitesse)));
+	  	el.style.top = posY + 'px';
+	  	el.style.left = posX + 'px';
+	  	setTimeout('move('+amplitude+', '+frequence+', '+vitesse+', '+larg+', '+posYi+', '+sens+')', 20);}
+	 	move(6, 10, 5, document.body.clientWidth, eval(parseInt(document.getElementById('JB').style.top)), 1);
+ 		</script>
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">	
- <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">
-	<form name="Le blog" action="index.html" method="get">
-<input type="submit" value="Le blog">
-	</form></a>
- <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button">
-	<form name="Contact" action="Contact.html" method="get">
-<input type="submit" value="Contact">
+ 		<a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">
+		<form name="Le blog" action="index.html" method="get">
+		<input type="submit" value="Le blog">
+		</form></a>
+ 		<a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button">
+		<form name="Contact" action="Contact.html" method="get">
+		<input type="submit" value="Contact">
+		</form></a>
+	 	<a href="Map.html" onclick="w3_close()" class="w3-bar-item w3-button">
+		<form name="Close" action="Map.html" method="get">
+		<input type="submit" value="╳">
 	</form></a>
 </nav>
 <div class="w3-top">
@@ -63,56 +47,65 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", Cambria, "Hoefler Text", "Liberati
 	<div class="w3-center w3-padding-16">La Carte interactive</div>
   </div>
 </div>
+<script>
+	function w3_open() 
+	{document.getElementById("mySidebar").style.display = "block";}
+ 
+	function w3_close()
+	{document.getElementById("mySidebar").style.display = "none";}
+</script>
 	  <center><h2>Notre carte interactive des coins buvettes de Nice !</h2></center>
 	  <center><h4>Cliquez, réservez, allez, buvez, rentrez, dormez!</h4></center>
-	  <center><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2884.68821102304!2d7.273284340588676!3d43.6962449851068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs!5e0!3m2!1sit!2sfr!4v1511020380721" width="1020" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></center>
-	  <hr>
-  
-  <footer class="w3-row-padding w3-padding-32">
+	  <center><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2884.68821102304!2d7.273284340588676!3d43.6962449851068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spubs!5e0!3m2!1sit!2sfr!4v1511020380721" width="900" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+   <footer class="w3-row-padding w3-padding-32">
     <div class="w3-third">
-	  <h3>CGV</h3>
+      <h3>CGV</h3>
       <p>Conditions générales de vente ci-dessous:</p>
       <p>Lien de <a href="CGV.html" target="_blank">conditions générales de vente</a></p>
     </div>
-   <a href="https://twitter.com/blogdesachaetp" class="twitter-share-button" 
+  <a href="https://twitter.com/blogdesachaetp" class="twitter-share-button" 
   data-count="vertical" data-via="BlogdeSachaetPierre">Tweet</a>
 <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
-	 <a href="https://www.facebook.com/Blog-de-Sacha-et-Pierre-964529350363835/?ref=your_pages" title="Suivez-moi sur facebook !"><img src="https://www.calliframe.com/wp-content/uploads/2013/12/facebook.png" /></a>
-	  <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/Blog-de-Sacha-et-Pierre-964529350363835/&layout=box_count&show_faces=true&width=65&action=like&font=arial&colorscheme=light&height=65" 
+<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/Blog-de-Sacha-et-Pierre-964529350363835/&layout=box_count&show_faces=true&width=65&action=like&font=arial&colorscheme=light&height=65" 
   scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:65px; height:65px; margin-top:3px;" allowTransparency="true"></iframe>
     <div class="w3-third">
       <h3>ARTICLES</h3>
       <ul class="w3-ul w3-hoverable">
         <li class="w3-padding-16">
-          <img src="images/footer 1.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">#SachaetPierre</span><br>
-			<a href="Article1.html" onclick="w3_close()" class="w3-bar-item w3-button">
-          <span>Coins tendances de la ville de Nice</span>
+          <img src="pictures/footer1.jpg" alt="Coins de tendances de la ville de Nice" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">#SachaetPierre</span>
+		<a href="Article1.html" onclick="w3_close()" class="w3-bar-item w3-button">
+			<span>Coins tendances de la ville de Nice</span></a>
         </li>
         <li class="w3-padding-16">
-          <img src="images/footer 2.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <img src="pictures/footer2.jpg" alt="Les bières artisanales de Nice" class="w3-left w3-margin-right" style="width:50px">
           <span class="w3-large">#SachaetPierre</span><br>
-				<a href="Article2.html" onclick="w3_close()" class="w3-bar-item w3-button">
-          <span>Les bières artisanales de Nice</span>
+			<a href="Article2.html" onclick="w3_close()" class="w3-bar-item w3-button">
+          <span>Les bières artisanales de Nice</span></a>
         </li> 
       </ul>
     </div>
 
-   
+    <div class="w3-third w3-serif">
+      <h3>HASHTAGS SUR NOS RESEAUX SOCIAUX</h3>
+      <p>
+        <span class="w3-tag w3-dark-grey w3-small">Touristes</span>
+		<span class="w3-tag w3-red w3-margin-bottom w3-margin-bottom">Nice</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Bières</span>
+        <span class="w3-tag w3-red w3-margin-bottom w3-margin-bottom">Drinks</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Boissons</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Networking</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Expériences</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Friends</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Partage</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Tapas</span>
+        <span class="w3-tag w3-red w3-margin-bottom w3-margin-bottom">Coins Tendances</span>
+		<span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Love</span>
+      </p>
+    </div>
   </footer>
-
-</div>
-
-<small class='website'>Viens sur <a href='index.html' target='_blank'>Leblog.com</a> pour connaitre notre aventure</small>
-<script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-
+<small><a href='index.html' target='_blank'>Leblog.com</a> pour connaitre notre aventure</small>
 </body>
 </html>
